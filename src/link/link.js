@@ -1,1 +1,1 @@
-export const LINK = "https://globaltraqsdev.com/api/";
+export const LINK = "https://globaltraqsdev.com/api";

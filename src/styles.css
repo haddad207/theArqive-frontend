@@ -1,4 +1,11 @@
 @import url("~react-leaflet-markercluster/dist/styles.min.css");
+@import url("~react-datepicker/dist/react-datepicker.css");
+@import url("https://unpkg.com/leaflet-geosearch@2.6.0/assets/css/leaflet.css");
+
+#root {
+    height: 100%;
+    width: 100%;
+}
 
 .top-bar {
     padding: 18px 0px 10px 30px;
@@ -43,7 +50,6 @@
 
 .add-story-button {
     margin-bottom: 10px;
-
     right: 0px;
 }
 
@@ -64,4 +70,1313 @@
 #world-map {
     width: 100%;
     height: 100%;
+}
+
+.MuiDrawer-paper {
+    /*margin-top: 90px;*/
+    width: 40%;
+}
+
+/*.root {*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    right: 0;*/
+/*    bottom: 0;*/
+/*    overflow: hidden;*/
+/*}*/
+
+/*.sidebar {*/
+/*    zIndex: 1000;*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    bottom: 0;*/
+/*    transition: transform .3s ease-out;*/
+/*    WebkitTransition: -webkit-transform .3s ease-out;*/
+/*    willChange: transform;*/
+/*    overflowY: auto;*/
+/*    width: 30%;*/
+/*}*/
+
+/*.content {*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    right: 0;*/
+/*    bottom: 0;*/
+/*    overflowY: auto;*/
+/*    WebkitOverflowScrolling: touch;*/
+/*    transition: left .3s ease-out, right .3s ease-out;*/
+/*    z-index: 1000;*/
+/*    width: 35%;*/
+/*  }*/
+
+/*.overlay {*/
+/*    zIndex: 0;*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    right: 0;*/
+/*    bottom: 0;*/
+/*    opacity: 0;*/
+/*    visibility: hidden;*/
+/*    !*transition: opacity .3s ease-out, visibility .3s ease-out;*!*/
+/*    backgroundColor: rgba(0,0,0,.3);*/
+/*}*/
+
+/*.dragHandle {*/
+/*    zIndex: 1;*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    bottom: 0;*/
+/*}*/
+
+#map-dashboard {
+    /*height: 100%;*/
+    width: 100%;
+    position: fixed;
+    margin-top: 118px;
+    height: calc(100% - 118px); /* only compatible in certain browsers - I believe it's okay for our browser reqs*/
+    height: -webkit-calc(100% - 118px); /* google, safari */
+    height: -moz-calc(100% - 118px); /* firefox */
+}
+.main-content-div {
+    margin-top: 118px;
+    padding: 20px;
+    height: 100%;
+    width: 100%;
+}
+
+#sidebar-style {
+    /*z-index: 1000;*/
+    position: absolute;
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
+    top: 0;
+}
+
+#sidebar2-style {
+    /*z-index: 1000;*/
+    position: absolute;
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
+    top: 0;
+}
+
+#open-sidebar-button {
+    z-index:998;
+    position: absolute;
+    right: 0px;
+}
+
+/* fix for bold Tiny MCE text not showing up in some pages */
+b, strong {
+    font-weight: bold !important; /* make this styling take precedence over bootstrap 'bolder' style */
+}
+
+.userway{
+    visibility: hidden;
+}
+
+.header-nav {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    text-transform: lowercase !important;
+}
+
+/*.userway-hide {*/
+/*    visibility: hidden !important;*/
+/*}*/
+
+/*.userway-show {*/
+/*    visibility: visible !important;*/
+/*}*/
+
+#story-page {
+  position: absolute;
+  transition: all .75s ease-out;
+  background: white;
+  height: auto;
+  min-height: 100%;
+  width: 100%;
+  z-index: 2;
+  margin-top: 65px;
+}
+/*#story-container:hover > #story-page {*/
+/*  top: 0;*/
+/*}*/
+
+#story-container {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+
+
+.aboutHeader   
+{
+    padding-left: 100px;
+    padding-top: 100px;
+    padding-bottom: 10px;
+    padding-right: 300px;
+    float: left;
+    font-size: 64px; /* should use rem or em for responsiveness */
+    color: #ffffff;
+    /*font: Eina;*/
+    font-family: eina, arial !important;
+    text-transform: lowercase;
+}
+
+.aboutDesc
+{
+    padding: 40px;
+    padding-left: 100px;
+    float: right;
+    font-size: 20px;
+    color: #ffffff;
+
+}
+
+.columnleft {
+    width: 60%;
+    position: relative;
+    float: left;
+    width: 50%;
+    top: 120px;
+
+    background: rgb(77, 65, 133);
+
+}
+  
+.columnright {
+    width: 40%;
+    position: relative;
+    float: right;
+    width: 50%;
+    top: 120px;
+    background: rgb(77, 65, 133);
+
+}
+
+.map-container {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transition: all .75s ease-out;
+}
+
+.column {
+    position: relative;
+    float: left;
+    width: 50%;
+    top: 120px;
+    margin-left: -10px;
+    margin-right: -10px;
+    background: rgb(77, 65, 133);
+}
+  
+  /* Clear floats after the columns */
+.aboutUs-row {
+    background: rgb(77, 65, 133);
+    height: auto !important;
+    min-height: 100% !important;
+    width: 100%;
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+}
+
+.favorite-stories {
+    min-height: 100%;
+    height: auto;
+    background: rgb(77, 65, 133);
+    padding-top: 60px !important;
+    color: white !important;
+    padding-bottom: 60px !important;
+}
+
+.user-profile-name {
+    font-family: "Eina", "Arial" !important;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    font-weight: 700;
+    color: black !important;
+    text-transform: none !important;
+}
+
+.default-btn-purple {
+    border-radius: 8px !important;
+    background: rgb(77, 65, 133) !important;
+    color: white;
+    font-family: "Eina", "Arial" !important;
+    text-transform: lowercase !important;
+}
+
+.site-header {
+    background-color: black !important;
+    padding-right: 0 !important;
+}
+
+.header-nav-link {
+    color: white !important;
+    font-family: Eina, Arial;
+    font-size: 1rem;
+}
+.header-nav-link:hover {
+    color: white !important;
+}
+
+.header-nav-username {
+    color: #e01783 !important;
+    font-weight: 600;
+    font-size: 1rem !important;
+    text-transform: lowercase !important;
+}
+
+.anonymous-nav-item {
+    margin: auto;
+}
+
+.header-nav-anonymous {
+    color: white !important;
+    text-transform: lowercase !important;
+    font-family: Eina, Arial;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.header-nav-anonymous-active {
+    color: #00ce7d !important;
+    font-family: Eina, Arial;
+    font-size: 1rem;
+    text-transform: lowercase !important;
+    font-weight: 600;
+}
+
+.header-nav-anonymous-not-active {
+    color: #e63f52 !important;
+    font-fsupport-header-activeamily: Eina, Arial;
+    font-size: 1rem;
+    text-transform: lowercase !important;
+    font-weight: 600;
+}
+
+.MuiSlider-colorPrimary {
+    color: rgb(77, 65, 133) !important;
+}
+
+.faq-page-background {
+    background: #F2CE5C !important;
+    min-height: 100%;
+    height: auto;
+    width: 100%;
+    padding-top: 80px !important;
+}
+
+.faq-card {
+    border-radius: 25px !important;
+    box-shadow: -5px 5px rgba(0, 0, 0, 0.1) !important;
+}
+
+.faq-question {
+    font-family: Eina, Arial;
+    /* color: #98999b !important; */
+    text-transform: lowercase !important;
+    font-weight: 600;
+    font-size: 1.7rem;
+    letter-spacing: -.5px;
+}
+
+.faq-answer {
+    font-size: 1.2rem;
+}
+
+.add-faq-button {
+    float: right;
+    border-radius: 8px !important;
+    text-transform: lowercase !important;
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+ .accordion {
+    background-color: white;
+    color: #F2CE5C;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+  }
+  
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  .active, .accordion:hover {
+    background-color: white;
+  }
+  
+  /* Style the accordion panel. Note: hidden by default */
+  .panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+  } 
+
+.header-user-dropdown-menu {
+    background-color: black !important;
+    width: 100%;
+    transform: translate3d(1px, 48px, 0px) !important;
+}
+
+.header-user-dropdown-button {
+    background-color: black !important;
+    width: 100%;
+    margin-right: 0;
+    border-color: black !important;
+    padding-right: 100px !important;
+}
+
+.dropdown-nav {
+    margin-right: 0 !important;
+    padding-right: 0 !important;
+}
+
+.dropdown-item:hover {
+  background-color: black !important;
+}
+
+.header-dropdown-nav-item {
+    color: #98999b !important;
+    text-transform: lowercase !important;
+    font-family: Eina, Arial;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+}
+
+.header-dropdown-nav-item:hover {
+    color: #98999b !important;
+}
+
+.header-dropdown {
+    margin-right: 0 !important;
+}
+
+button {
+    outline: 0 !important;
+}
+
+*:focus {
+    outline: 0 !important;
+}
+
+.contact-us-nav-link:hover {
+    color: #248dc1 !important;
+}
+
+.contact-us-nav-link:focus {
+    color: #248dc1 !important;
+}
+
+.contact-us-div {
+    background-color: #248dc1 !important;
+    padding-top: 3% !important;
+}
+
+.contact-us-card {
+    border-radius: 25px !important;
+    box-shadow: -5px 5px rgba(0, 0, 0, 0.1) !important;
+}
+
+.contact-us-title {
+    font-family: Eina, Arial;
+    color: #98999b !important;
+    text-transform: lowercase !important;
+    font-weight: 600;
+    font-size: 1.7rem;
+    letter-spacing: -.5px;
+}
+
+.contact-us-text {
+    font-family: "Courier New", "Courier" !important;
+    text-transform: lowercase !important;
+    font-weight: 600 !important;
+    color: #98999b !important;
+    font-size: 1rem;
+}
+
+.contact-us-btn {
+    background-color: black !important;
+    border-radius: 15px !important;
+    text-transform: lowercase !important;
+    color: white !important;
+    font-size: 1rem !important;
+    width: 120px !important;
+}
+
+.contact-us-btn-div {
+    text-align: center;
+}
+
+.contactUs-header-active {
+    color: #248dc1 !important;
+}
+
+.support-us-header-active {
+    color: #e01783 !important;
+}
+
+.support-us-nav-link:hover {
+    color: #e01783 !important;
+}
+
+.support-us-nav-link:focus {
+    color: #e01783 !important;
+}
+
+.support-us-div {
+    padding: 0 !important;
+}
+
+.support-us-main-content-col {
+    background-color: #e01783 !important;
+    width: 100%;
+    min-height: 100%;
+    height: auto;
+}
+
+.support-us-main-content-div {
+    margin-top: 10% !important;
+    width: 60%;
+    height: 60%;
+    margin-right: 20%;
+    margin-left: 20%;
+}
+
+.support-us-title {
+    text-transform: lowercase !important;
+    color: white !important;
+    font-family: "Eina", "Arial" !important;
+    font-size: 2.5rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.support-us-image-div {
+    position: relative;
+    height: auto;
+    width: 100%;
+}
+
+.text-block-1 {
+    position: absolute;
+    top: 42%;
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    color: white;
+}
+
+.support-us-images {
+    width: 100%;
+    height: auto;
+}
+
+.support-us-image-main-text {
+    color: white;
+    font-family: "Eina", "Arial";
+    text-transform: lowercase;
+    font-weight: 600;
+}
+
+.support-us-image-sub-text {
+    font-size: 1.05rem;
+    margin-top: -10px;
+    font-weight: 500;
+    margin-bottom: 1em;
+}
+
+.support-us-main-content-text {
+    color: white;
+    font-size: 1.1rem;
+}
+
+.support-us-side-content-col {
+    margin-top: 7.2% !important;
+    height: 60%;
+    padding-bottom: 50px;
+}
+
+.support-us-side-title {
+    color: #e01783 !important;
+    font-size: 2.5rem;
+    font-family: "Eina", "Arial";
+    font-weight: 700;
+    text-transform: lowercase;
+}
+
+.support-us-side-content-div {
+    text-align: center;
+}
+
+.social-media-images {
+    width: 40px;
+    height: 40px;
+    margin-top: 40px;
+    margin-right: 40px;
+}
+
+.faq-header-active {
+    color: #F0DC7D !important;
+}
+
+.faq-header-nav-link:hover, .faq-header-nav-link:focus {
+    color: #F0DC7D !important;
+}
+
+.about-us-header-active {
+    color: rgb(77, 65, 133) !important;
+}
+
+.about-us-header-nav-link:hover, .aabout-us-header-nav-link:focus {
+    color: rgb(77, 65, 133) !important;
+}
+
+.resources-header-active {
+    color: #00ce7d !important;
+}
+
+.resources-nav-link:hover, .resources-nav-link:focus {
+    color: #00ce7d !important;
+}
+
+.resources-main-div {
+    background-color: #00ce7d !important;
+    height: auto;
+    min-height: 100%;
+    width: 100%;
+    padding: 15px !important;
+}
+
+.resources-main-content-div {
+    margin-top: 5% !important;
+    width: 100%;
+    height: 60%;
+    margin-left: 20%;
+}
+
+.resource-title {
+    text-transform: none !important;
+    font-family: Eina, Arial;
+    color: black !important;
+    font-weight: 600;
+    font-size: 1.7rem;
+    letter-spacing: -.5px;
+    margin: 0 !important;
+}
+
+.resource-text {
+    font-family: "Courier New", "Courier" !important;
+    font-weight: 600 !important;
+    color: black !important;
+    font-size: 1rem;
+    margin: 0 !important;
+}
+
+.resource-contact-text {
+    font-family: "Courier New", "Courier" !important;
+    font-weight: 600 !important;
+    color: black !important;
+    font-size: 1rem;
+    margin: 0 !important;
+}
+
+.resources-card {
+    border-radius: 25px !important;
+    box-shadow: -5px 5px rgba(0, 0, 0, 0.1) !important;
+    margin-top: 1rem !important;
+}
+
+.resources-sub-content-div {
+    width: 100%;
+    height: 100%;
+}
+
+.text-underline {
+    text-decoration: underline !important;
+}
+
+.resources-title {
+    text-transform: lowercase !important;
+    color: white !important;
+    font-family: "Eina", "Arial" !important;
+    font-size: 2.5rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.resources-sub-text {
+    color: white;
+    font-family: "Courier New", "Courier" !important;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.search-bar-story-card-trim-personal {
+    height: 15px;
+    background-color: #e01783 !important;
+    width: 100%;
+}
+
+.search-bar-story-card-trim-community {
+    height: 15px;
+    background-color: #00ce7d !important;
+    width: 100%;
+}
+
+.search-bar-story-card-trim-historical {
+    height: 15px;
+    background-color: #248dc1 !important;
+    width: 100%;
+}
+
+.sidebar-story-title {
+    font-family: "Eina", "Arial" !important;
+    font-size: 1.5rem !important;
+    font-weight: 600 !important;
+    color: black !important;
+    text-transform: none !important;
+    text-transform: none !important;
+}
+
+.sidebar-story-description {
+    font-family: "Eina", "Arial" !important;
+    font-size: 1rem !important;
+    font-weight: 500 !important;
+    color: black !important;
+    text-transform: none !important;
+}
+
+.sidebar-story-read-more {
+    font-family: "Courier New", "Courier" !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    color: rgb(77, 65, 133) !important;
+    text-transform: lowercase !important;
+}
+
+.profile-page-edit-story {
+    background-color: transparent !important;
+    font-family: "Courier New", "Courier" !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    color: rgb(77, 65, 133) !important;
+    text-transform: lowercase !important;
+    padding: 0 !important;
+    margin-top: 10px;
+}
+
+.sidebar-story-author {
+    font-family: "Courier New", "Courier" !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    color: black !important;
+    text-transform: none !important;
+}
+
+.sidebar-story-username {
+    font-family: "Courier New", "Courier" !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    color: rgb(77, 65, 133) !important;
+    text-transform: none !important;
+}
+
+.sidebar-text {
+    font-family: "Eina", "Arial" !important;
+    font-size: 1rem !important;
+    font-weight: 500 !important;
+    color: #98999b !important;
+    text-transform: none !important;
+}
+
+.react-date-picker, react-date-picker--closed, react-date-picker--enabled {
+    padding-right: 20px !important;
+}
+
+.add-story-button {
+    background-color: #e01783 !important;
+    border-radius: 8px !important;
+}
+
+.map-buttons {
+    border-radius: 8px !important;
+}
+
+.story-page-story-title {
+    font-family: "Eina", "Arial" !important;
+    font-size: 2rem !important;
+    font-weight: 500 !important;
+    color: black !important;
+    text-transform: none !important;
+}
+
+.story-page-dates {
+    font-family: "Courier New", "Courier" !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    color: rgb(77, 65, 133) !important;
+    text-transform: lowercase !important;
+}
+
+.anticon-user {
+    margin-top: 20px;
+}
+
+.story-page-favorites {
+    font-family: "Courier New", "Courier" !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    color: black !important;
+    text-transform: lowercase !important;
+}
+
+.story-page-favorite-count {
+    font-family: "Courier New", "Courier" !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    color: rgb(77, 65, 133) !important;
+    text-transform: lowercase !important;
+}
+
+.login-link {
+    color: #e01783 !important;
+    font-family: "Courier New", "Courier" !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    text-transform: lowercase !important;
+}
+
+.flag-story-btn {
+    border-radius: 8px !important;
+    background: #f0a055 !important;
+    color: white;
+    font-family: "Eina", "Arial" !important;
+    text-transform: lowercase !important;
+    float: right;
+}
+
+.story-comment-card {
+    border: none !important;
+    border-radius: 25px !important;
+    box-shadow: -5px 5px rgba(0, 0, 0, 0.1) !important;
+    margin-top: 20px;
+    width: 100% !important;
+}
+
+.story-card-description {
+    font-family: "Courier New", "Courier" !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    color: rgb(77, 65, 133) !important;
+    text-transform: lowercase !important;
+}
+
+.user-profile-main-content {
+    padding-top: 50px;
+}
+
+.user-profile-bio {
+    font-family: "Eina", "Arial" !important;
+    font-size: 1rem;
+    color: black !important;
+    text-transform: none !important;
+}
+
+.user-profile-body {
+    margin-top: 50px;
+}
+
+.profile-story-card {
+    width: 100% !important;
+    height: auto !important;
+    border-radius: 20px !important;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+
+.profile-page-story-settings-card {
+    color: white;
+    font-family: "Eina", "Arial" !important;
+    font-size: .85rem !important;
+    font-weight: 600 !important;
+    background-color: rgb(77, 65, 133) !important;
+    text-transform: lowercase !important;
+    border-radius: 20px;
+    height: 100%;
+    width: 80%;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.user-profile-my-posts-title {
+    font-family: "Eina", "Arial" !important;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    font-weight: 500;
+    color: black !important;
+    text-transform: none !important;
+}
+
+.register-div {
+    background-color: rgb(77, 65, 133) !important;
+    padding-top: 3% !important;
+}
+
+.register-card {
+    border-radius: 25px !important;
+    box-shadow: -5px 5px rgba(0, 0, 0, 0.1) !important;
+}
+
+.register-title {
+    font-family: Eina, Arial;
+    color: #98999b !important;
+    text-transform: lowercase !important;
+    font-weight: 600;
+    font-size: 1.7rem;
+    letter-spacing: -.5px;
+}
+
+.register-text {
+    font-family: "Courier New", "Courier" !important;
+    text-transform: lowercase !important;
+    font-weight: 600 !important;
+    color: #98999b !important;
+    font-size: 1rem;
+}
+
+.register-btn {
+    background-color: black !important;
+    border-radius: 15px !important;
+    text-transform: lowercase !important;
+    color: white !important;
+    font-size: 1rem !important;
+    width: 120px !important;
+}
+
+.login-div {
+    background-color: rgb(77, 65, 133) !important;
+    padding-top: 3% !important;
+}
+
+.login-card {
+    border-radius: 25px !important;
+    box-shadow: -5px 5px rgba(0, 0, 0, 0.1) !important;
+}
+
+.login-title {
+    font-family: Eina, Arial;
+    color: #98999b !important;
+    text-transform: lowercase !important;
+    font-weight: 600;
+    font-size: 1.7rem;
+    letter-spacing: -.5px;
+}
+
+.login-text {
+    font-family: "Courier New", "Courier" !important;
+    text-transform: lowercase !important;
+    font-weight: 600 !important;
+    color: #98999b !important;
+    font-size: 1rem;
+}
+
+.login-btn {
+    background-color: black !important;
+    border-radius: 15px !important;
+    text-transform: lowercase !important;
+    color: white !important;
+    font-size: 1rem !important;
+    width: 120px !important;
+}
+
+
+.forgot-password-div {
+    background-color: rgb(77, 65, 133) !important;
+    padding-top: 3% !important;
+}
+
+.forgot-password-card {
+    border-radius: 25px !important;
+    box-shadow: -5px 5px rgba(0, 0, 0, 0.1) !important;
+}
+
+.forgot-password-title {
+    font-family: Eina, Arial;
+    color: #98999b !important;
+    text-transform: lowercase !important;
+    font-weight: 600;
+    font-size: 1.7rem;
+    letter-spacing: -.5px;
+}
+
+.forgot-password-text {
+    font-family: "Courier New", "Courier" !important;
+    text-transform: lowercase !important;
+    font-weight: 600 !important;
+    color: #98999b !important;
+    font-size: 1rem;
+}
+
+.forgot-password-btn {
+    background-color: black !important;
+    border-radius: 15px !important;
+    text-transform: lowercase !important;
+    color: white !important;
+    font-size: 1rem !important;
+    width: 150px !important;
+}
+
+.login-register-links a {
+    color: rgb(77, 65, 133) !important;
+    font-weight: 600 !important;
+
+}
+
+.react-switch {
+    margin-top: 7px;
+}
+
+.profile-page-favorite-posts-title {
+    text-align: center;
+    font-family: "Eina", "Arial" !IMPORTANT;
+    color: white;
+    text-transform: lowercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.moveimage
+{
+    padding-right: 10px;
+    padding-top: 150px;
+    width: 80%;
+    float: right;
+}
+
+.con
+{
+    background: rgb(77, 65, 133);
+}
+
+
+.threeButton1{
+    padding-right: 100px;
+    text-align: center;
+    width: 80%;
+    border-color: #F0DC7D;
+    border-style: solid;
+    border-radius: 40px 40px 40px 40px;
+}
+.threeButton2{
+    text-align: center;
+    width: 80%;
+    border-color: #CD3582;
+    border-style: solid;
+
+    border-radius: 40px 40px 40px 40px;
+}
+.threeButton3{
+    text-align: center;
+    width: 80%;
+    border-color: #448CBC;
+    border-style: solid;
+    border-radius: 40px 40px 40px 40px;
+}
+.aboutHeader
+{
+    padding-top: 150px;
+
+    float: left;
+    font-size: 48;
+    color: #ffffff;
+    font: Eina;
+}
+
+.aboutDesc
+{
+
+    float: right;
+    font-size: 20;
+    color: #ffffff;
+
+}
+
+.columnleft {
+    width: 60%;
+    position: relative;
+    float: left;
+    width: 50%;
+    top: 120px;
+
+    background: rgb(77, 65, 133);
+
+}
+
+.columnright {
+    width: 40%;
+    position: relative;
+    float: right;
+    width: 50%;
+    top: 120px;
+    background: rgb(77, 65, 133);
+
+}
+
+.column {
+    position: relative;
+    float: left;
+    width: 50%;
+    top: 120px;
+    margin-left: -10px;
+    margin-right: -10px;
+    background: rgb(77, 65, 133);
+}
+
+  /* Clear floats after the columns */
+.aboutUs-row{
+    background: rgb(77, 65, 133);
+    height: 100%;
+}
+
+.favorite-stories {
+    min-height: 100%;
+    height: auto;
+    background: rgb(77, 65, 133);
+    padding-top: 60px !important;
+    color: white !important;
+}
+
+.user-profile-name {
+    color: rgb(77, 65, 133);
+}
+
+.default-btn-purple {
+    border-radius: 8px !important;
+    background: rgb(77, 65, 133) !important;
+    color: white;
+}
+
+.user-profile-favorite-posts-div {
+    marginTop: "25px";
+    width: 90%;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.user-profile-story-description {
+    font-family: "Eina", "Arial" !important;
+    font-size: 0.8rem;
+    color: black !important;
+    text-transform: none !important;
+}
+
+.user-profile-favorite-bookmark-icon {
+    height: 40px;
+    float: right;
+    width: 40px;
+}
+
+.btn-no-style {
+    background-color: transparent;
+    border: none;
+    float: right;
+}
+
+
+.favorite-story-btn {
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    right: -13px;
+    top: -4px;
+}
+
+.edit-profile-pic-button {
+    width: 40px;
+    height: 40px;
+    background: rgb(77, 65, 133) !important;
+    color: white;
+    border-radius: 50px;
+    position: absolute;
+    right: 15;
+    top: 95;
+    border: none;
+}
+.profile-image-div {
+    width: 150px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.profile-settings-div {
+    background: rgb(77, 65, 133) !important;
+    min-height: 100%;
+    height: auto;
+    width: 100%;
+}
+
+.profile-settings-div span {
+    position: relative;
+    left: 20;
+    top: -14;
+    color: white;
+    font-family: "Eina", "Arial" !important;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: lowercase;
+}
+.profile-settings-div label {
+    color: white;
+    font-family: "Eina", "Arial" !important;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: lowercase;
+}
+
+
+.profile-settings-div h1{
+    color: white;
+    font-family: "Eina", "Arial" !important;
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: lowercase;
+    letter-spacing: 1px;
+}
+
+.profile-settings-div col {
+    padding-top: 50px;
+}
+
+.profile-settings-bio-form {
+    width: 100% !important;
+    height: 150px !important;
+}
+
+.btn-delete-profile {
+    color: white !important;
+    font-family: "Courier New", "Courier" !important;
+    font-weight: 600 !important;
+    text-transform: lowercase !important;
+    background-color: transparent !important;
+    border: none !important;
+    font-size: 1rem !important;
+}
+
+.profile-settings-cancel-btn {
+    background-color: transparent;
+    border-radius: 20px;
+    width: 200px;
+    height: 50px;
+    color: white;
+    font-family: "Eina", "Arial";
+    text-transform: lowercase;
+    border: 1px solid white;
+    font-weight: 600;
+}
+
+.profile-settings-submit-btn {
+    background-color: white;
+    border-radius: 20px;
+    width: 200px;
+    height: 50px;
+    color: rgb(77, 65, 133) !important;
+    font-family: "Eina", "Arial";
+    text-transform: lowercase;
+    border: 1px solid rgb(77, 65, 133) !important;
+    font-weight: 600;
+}
+
+.copyright
+{
+    padding-right: 10px;
+    padding-top: 30px;
+    width: 80%;
+    float: right;
+    font-size: 12px;
+    color: #98999b;
+}
+
+.faq-plus-btn {
+    width: 20px;
+    height: 20px;
+}
+
+.faq-minus-btn {
+    width: 15px;
+    height: 20px;
+}
+
+.faq-title-div {
+    display: flex;
+    align-items: center;
+    padding-right: 70px;
+}
+
+.sidebar-story-div {
+    padding: 80px 40px;
+    position: relative;
+    height: auto;
+    min-height: 100%;
+}
+
+.story-comment-header {
+    font-family: "Eina", "Arial" !important;
+    font-size: 1rem !important;
+    font-weight: 500 !important;
+    color: black !important;
+    text-transform: lowercase !important;
+}
+
+.story-comment-text {
+    font-family: "Eina", "Arial" !important;
+    font-size: 1rem !important;
+    font-weight: 500 !important;
+    color: black !important;
+    text-transform: none !important;
+}
+
+.down-icon-col {
+    left: 20px;
+    position: absolute !important;
+    top: 55px;
+}
+
+.fixed-down-icon-col {
+    left: 20px;
+    position: fixed !important;
+    top: 173px;
+}
+
+.down-arrow-row a {
+    color: rgb(77, 65, 133) !important;
+}
+
+.story-favorites-icon {
+    height: 40px;
+    width: 40px;
+}
+
+.sidebar-story-anon-username {
+    font-family: "Courier New", "Courier" !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    color: #98999b !important;
+    text-transform: none !important;
 }

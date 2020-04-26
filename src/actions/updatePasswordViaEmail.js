@@ -2,30 +2,30 @@ import User from "../sequelize";
 import bcrypt from "bcrypt";
 import { LINK } from "../link/link";
 const BYCRPT_SALT_ROUNDS = 12;
-module.exports = app => {
-  app.put(LINK + "auth/users/", (req, res, next) => {
+module.exports = (app) => {
+  app.put(`${LINK}/auth/users/`, (req, res, next) => {
     User.findOne({
       where: {
-        username: req.body.username
-      }
-    }).then(user => {
+        username: req.body.username,
+      },
+    }).then((user) => {
       if (user != null) {
-        console.log("user exists in db");
+        // console.log('user exists in db');
         bcrypt
           .hash(req.body.password, BYCRPT_SALT_ROUNDS)
-          .then(hashedPassword => {
+          .then((hashedPassword) => {
             user.update({
               password: hashedPassword,
               resetPasswordToken: null,
-              resetPasswordExpires: null
+              resetPasswordExpires: null,
             });
           })
           .then(() => {
-            console.log("password updated");
+            // console.log('password updated');
             res.status(200).send({ message: "password updated" });
           });
       } else {
-        console.log("no user exists in db to update");
+        // console.log('no user exists in db to update');
         res.status(404).json("no user exists in db to update");
       }
     });
