@@ -111,6 +111,11 @@ function About() {
           <p className="copyright">
             <br />
             <br />
+            This website was redeveloped, redesigned, and relaunched in 2020 
+            due to an amazing and diverse team of Cal State LA students. 
+            Without them, none of this would have been possible. Thanks to:
+            <br/>
+            <br/>
             Development Team
             <br />
             Fadi Haddad, Klaudia Hernandez, Nathaniel Suarez, Tony Truong, and Justine West
