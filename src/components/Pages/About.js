@@ -123,7 +123,7 @@ function About() {
             <br />
             Public Relations Team
             <br />
-            Andrea Estrada, Aliyah Johnson, Laytyn MacKinnon, Nicholas Ochoa, Pamela Sanchez, Maryah Rendon, and members of Zenith Experiential, Los Angeles (ZENX-LA)
+            Andrea Estrada, Aliyah Johnson, Laytyn MacKinnon, Nicholas Ochoa, Pamela Sanchez, Maryah Rendon, members of Zenith Experiential, Los Angeles (ZENX-LA)
             <br />
             <br />
             Art Team
