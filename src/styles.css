@@ -1611,6 +1611,19 @@ textarea {
     #story-page {
         margin-top: 100px;
     }
+    .support-us-main-content-div {
+        margin-left: 0px;
+        margin-right: 0px;
+        width: 100%;
+    }
+
+    .support-us-image-main-text {
+        font-size: 2rem;
+    }
+
+    .support-us-image-sub-text{
+        font-size: 1.5rem;
+    }
 }
 
 .not-found-background {

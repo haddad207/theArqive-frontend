@@ -121,16 +121,16 @@ function About() {
             Fadi Haddad, Klaudia Hernandez, Nathaniel Suarez, Tony Truong, and Justine West
             <br />
             <br />
-            Public Relations Team
-            <br />
-            Andrea Estrada, Aliyah Johnson, Laytyn MacKinnon, Nicholas Ochoa, Pamela Sanchez, Maryah Rendon, members of Zenith Experiential, Los Angeles (ZENX-LA)
-            <br />
-            <br />
             Art Team
             <br />
             Art Director: Liz Sweeney
             <br />
             Designers: Angie Strong and Laura Torres
+            <br />
+            <br />
+            Public Relations Team
+            <br />
+            Andrea Estrada, Aliyah Johnson, Laytyn MacKinnon, Nicholas Ochoa, Pamela Sanchez, Maryah Rendon, members of Zenith Experiential, Los Angeles (ZENX-LA)
           </p>
 
         </Col>

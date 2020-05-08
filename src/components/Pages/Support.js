@@ -71,7 +71,7 @@ export default function Support() {
               </Col>
             </Row>
             <Row style={{ paddingBottom: "50px" }}>
-              <div className="col-md-6 m-auto">
+              <div className="col-md-8 m-auto col-12 col-xl-6 col-lg-6">
                 <div
                   className="card card-body mt-5"
                   style={{ borderRadius: "8px" }}
