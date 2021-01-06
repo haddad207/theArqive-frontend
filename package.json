@@ -10,7 +10,7 @@
     "@testing-library/user-event": "^7.2.1",
     "@tinymce/tinymce-react": "^3.5.0",
     "antd": "^4.1.5",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "chroma-js": "^2.1.0",
     "date-fns": "^2.12.0",
     "email-validator": "^2.0.4",
